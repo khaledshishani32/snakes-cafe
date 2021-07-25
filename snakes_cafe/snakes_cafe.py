@@ -35,6 +35,7 @@ Unicorn Tears""")
 
 order=[]
 count =0 
+count1=0
 print("""***********************************
 ** What would you like to order? **
 ***********************************""")
@@ -49,16 +50,20 @@ while(-1 <0):
  if order_item in menu:
   order.append(order_item)
   count = order.count(order_item)
+  count1 +=1
   print(f" ** {count} order of {order_item} have been added to your meal **")
   
  
  elif order_item == "quit":
-     exit() 
-
+     break 
+     
  else:
   print("not aviable , chooes something else")
  
 
-
+print("This is your order : " )
+for j in order:
+    print(j.upper())
+    
 
 
